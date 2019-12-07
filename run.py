@@ -11,7 +11,7 @@ FLAGS.model = "darkflow/cfg/yolo.cfg" # tensorflow model
 FLAGS.load = "darkflow/bin/yolo.weights" # tensorflow weights
 
 FLAGS.threshold = 0.4 # threshold of decetion confidance (detection if confidance > threshold )
-FLAGS.gpu = 1 #how much of the GPU to use (between 0 and 1) 0 means use cpu
+FLAGS.gpu = 1 #how much of tfhe GPU to use (between 0 and 1) 0 means use cpu
 FLAGS.track = True # wheither to activate tracking or not
 FLAGS.trackObj = ['car', 'bus']
 FLAGS.saveVideo = False  #whether to save the video or not
@@ -23,8 +23,10 @@ FLAGS.skip = 10 # how many frames to skipp between each detection to speed up th
 FLAGS.json = True
 FLAGS.csv = False #whether to write csv file or not(only when tracking is set to True)
 FLAGS.display = False # display the tracking or not
+FLAGS.verbalise = False
 
 tfnet = TFNet(FLAGS)
 
 tfnet.camera()
-exit('Demo stopped, exit.')
+# exit()
+# exit('Demo stopped, exit.')
